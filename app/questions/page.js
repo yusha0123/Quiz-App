@@ -116,10 +116,13 @@ const Questions = () => {
       <Toast ref={toast} />
       <div className="wrapper">
         <div className="bg-white px-4 shadow-md w-[95%] md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
-          <h1 className="text-4xl font-bold tracking-widest text-center py-4">
-            Quizy
-          </h1>
-          <ProgressBar value={progressValue} />
+          <h1 className="heading">Quizy</h1>
+          <ProgressBar
+            value={progressValue}
+            showValue={false}
+            style={{ height: "10px" }}
+            color={progressValue === 100 && "green"}
+          />
           <div className="flex justify-between py-5 px-2 font-bold text-md">
             <p>Category: {showCategory(category)}</p>
             <p>Score: {score}</p>

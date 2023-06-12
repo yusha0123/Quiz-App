@@ -2,22 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 .wrapper {
-  @apply min-h-screen w-full bg-[#9DB2BF] flex items-center justify-center;
+  @apply min-h-screen w-full bg-gray-300 flex items-center justify-center;
+}
+
+.heading {
+  @apply text-4xl font-bold tracking-widest text-center py-4;
 }
 
 .option.correct {
-  color: white;
-  background-color: #1b9c85;
+  @apply text-white bg-green-400;
 }
 
 .option.incorrect {
-  color: white;
-  background-color: #e06469;
+  @apply text-white bg-red-400;
 }
 
 .option {
   @apply text-black bg-white shadow-md rounded-md text-xl py-4 px-2 cursor-pointer disabled:cursor-default;
+}
+
+.divider {
+  @apply bg-gray-300 rounded-lg h-1 w-full;
 }
 
 ::-webkit-scrollbar {

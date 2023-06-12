@@ -33,10 +33,8 @@ export default function Home() {
   return (
     <main className="wrapper">
       <div className="bg-white px-4 shadow-md w-[95%] md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
-        <h1 className="text-4xl font-bold tracking-widest text-center py-4">
-          Welcome to Quizy
-        </h1>
-        <div class="bg-gray-300 rounded-lg h-1 w-full" />
+        <h1 className="heading">Welcome to Quizy</h1>
+        <div class="divider" />
         <div className="grid grid-cols-1 md:grid-cols-2 p-10 gap-4">
           <Image
             src={"/logo.png"}
@@ -53,7 +51,7 @@ export default function Home() {
               options={categoryOptions}
               optionLabel="option"
               placeholder="Questions Category"
-              className="w-full md:max-w-xs lg:max-w-md"
+              className="w-full md:max-w-xs xl:max-w-md"
             />
             <Dropdown
               value={difficulty}
@@ -61,16 +59,16 @@ export default function Home() {
               options={difficultyOptions}
               optionLabel="option"
               placeholder="Difficulty Level"
-              className="w-full md:max-w-xs lg:max-w-md"
+              className="w-full md:max-w-xs xl:max-w-md"
             />
-            <p className="text-md">Total Questions: {limit}</p>
+            <p className="text-md font-semibold">Total Questions: {limit}</p>
             <Slider
               value={limit}
               onChange={(e) => setLimit(e.value)}
               min={5}
               max={50}
               step={5}
-              className="w-full md:max-w-xs lg:max-w-md"
+              className="w-full md:max-w-xs xl:max-w-md"
             />
             <Button
               label="Start Quiz"
