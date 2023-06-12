@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.wrapper {
+  @apply min-h-screen w-full bg-[#9DB2BF] flex items-center justify-center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.option.correct {
+  color: white;
+  background-color: #1b9c85;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.option.incorrect {
+  color: white;
+  background-color: #e06469;
+}
+
+.option {
+  @apply text-black bg-white shadow-md rounded-md text-xl py-4 px-2 cursor-pointer disabled:cursor-default;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #565050;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9ecec;
+  border-radius: 10px;
 }
