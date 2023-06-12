@@ -10,10 +10,6 @@ import { ProgressBar } from "primereact/progressbar";
 import { ConfirmDialog } from "primereact/confirmdialog";
 import { Toast } from "primereact/toast";
 
-export const metadata = {
-  title: "Quizy || Questions",
-};
-
 const Questions = () => {
   const {
     showQuestionScreen,
@@ -53,7 +49,9 @@ const Questions = () => {
             detail: "Please try again Later!",
             life: 5000,
           });
-          router.push("/");
+          setTimeout(() => {
+            router.push("/");
+          }, 5000);
         }
         const data = await response.json();
         setData(data);

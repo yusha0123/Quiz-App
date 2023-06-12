@@ -4,10 +4,6 @@ import { useContext } from "react";
 import AppContext from "@/context/AppContext";
 import { Button } from "primereact/button";
 
-export const metadata = {
-  title: "Quizy || Results",
-};
-
 const Results = () => {
   const { limit, score, showResultScreen } = useContext(AppContext);
   const router = useRouter();
