@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <main className="wrapper">
-      <div className="bg-white px-4 shadow-md w-[95%] md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
+      <div className="bg-white px-4 shadow-md w-full md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
         <h1 className="heading">Welcome to Quizy</h1>
         <div class="divider" />
         <div className="grid grid-cols-1 md:grid-cols-2 p-10 gap-4">

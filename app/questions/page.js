@@ -113,7 +113,7 @@ const Questions = () => {
     <>
       <Toast ref={toast} />
       <div className="wrapper">
-        <div className="bg-white px-4 shadow-md w-[95%] md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
+        <div className="bg-white px-4 shadow-md w-full md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
           <h1 className="heading">Quizy</h1>
           <ProgressBar
             value={progressValue}
@@ -126,7 +126,11 @@ const Questions = () => {
             <p>Score: {score}</p>
           </div>
           <div className="flex flex-col min-h-[70vh] p-10 gap-4 w-full">
-            {loading && <ProgressSpinner />}
+            {loading && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <ProgressSpinner />
+              </div>
+            )}
             {data.length > 0 && (
               <>
                 <h2 className="text-2xl text-center font-medium">{`Q${

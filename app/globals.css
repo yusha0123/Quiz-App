@@ -17,11 +17,11 @@
 }
 
 .option.correct {
-  @apply text-white bg-green-400;
+  @apply text-white bg-green-500;
 }
 
 .option.incorrect {
-  @apply text-white bg-red-400;
+  @apply text-white bg-red-500;
 }
 
 .option {
