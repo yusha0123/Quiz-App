@@ -3,17 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    -webkit-tap-highlight-color: transparent;
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
 .wrapper {
-  @apply min-h-screen w-full bg-gray-300 flex items-center justify-center;
+  @apply min-h-[100dvh] w-full bg-gray-300 flex items-center justify-center;
 }
 
 .heading {
-  @apply text-4xl font-bold tracking-widest text-center py-4;
+  @apply text-4xl font-bold tracking-widest text-center py-2;
 }
 
 .option.correct {
@@ -25,11 +75,8 @@
 }
 
 .option {
-  @apply text-black bg-white shadow-md rounded-md text-xl py-4 px-2 cursor-pointer disabled:cursor-default;
-}
-
-.divider {
-  @apply bg-gray-300 rounded-lg h-1 w-full;
+  @apply text-black bg-white rounded-md text-sm lg:text-lg py-3 px-2 cursor-pointer disabled:cursor-default;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 ::-webkit-scrollbar {

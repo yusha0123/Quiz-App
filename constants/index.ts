@@ -56,13 +56,13 @@ export const difficultyOptions = [
   },
 ];
 
-export const alphabeticNumeral = (index) => {
+export const alphabeticNumeral = (index: number) => {
   const asciiCode = index + 65;
   const letter = String.fromCharCode(asciiCode);
   return letter + ". ";
 };
 
-export const showCategory = (category) => {
+export const showCategory = (category: string) => {
   if (category === "general_knowledge") return "General Knowledge";
   else if (category === "science") return "Science";
   else if (category === "sport_and_leisure") return "Sports & Leisure";
