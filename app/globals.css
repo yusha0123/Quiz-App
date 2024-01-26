@@ -63,7 +63,7 @@
 }
 
 .heading {
-  @apply text-4xl font-bold tracking-widest text-center py-2;
+  @apply text-2xl lg:text-4xl font-extrabold text-primary tracking-wide text-center py-2;
 }
 
 .option.correct {

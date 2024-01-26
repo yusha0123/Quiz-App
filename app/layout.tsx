@@ -1,9 +1,12 @@
 import ModalProvider from "@/components/modals/modal-provider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Quizy - Test Your Knowledge!",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <ModalProvider />
         {children}
       </body>

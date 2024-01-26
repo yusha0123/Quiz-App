@@ -20,7 +20,7 @@ const ResultModal = () => {
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="text-center text-xl md:text-2xl">
-            Quiz Results
+            Quiz Result
           </DialogTitle>
           <Separator className="my-2" />
           <DialogDescription>

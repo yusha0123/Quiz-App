@@ -25,8 +25,8 @@ const QuizSettings = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6">
-      <h2 className="text-center tracking-wide text-2xl font-bold">
+    <div className="flex flex-col justify-center items-center gap-4 md:gap-6">
+      <h2 className="text-center tracking-wide text-lg md:text-xl lg:text-2xl font-bold">
         Quiz Settings
       </h2>
       <Select value={category} onValueChange={(value) => setCategory(value)}>
@@ -56,7 +56,9 @@ const QuizSettings = () => {
           ))}
         </SelectContent>
       </Select>
-      <p className="text-md font-semibold">Total Questions: {limit[0]}</p>
+      <p className="text-xs lg:text-sm font-semibold">
+        Total Questions: {limit[0]}
+      </p>
       <Slider
         value={limit}
         onValueChange={(value) => setLimit(value)}
