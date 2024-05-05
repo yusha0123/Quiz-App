@@ -95,7 +95,7 @@ const Questions = ({ questions, limit, category }: Props) => {
           <p>Category: {showCategory(category)}</p>
           <p>Score: {score}</p>
         </div>
-        <div className="flex flex-col min-h-[70vh] p-10 gap-4 w-full">
+        <div className="flex flex-col min-h-[70vh] py-10 px-3 md:px-5 gap-4 w-full">
           {questions.length > 0 && (
             <>
               <h2 className="text-2xl text-center font-medium">{`Q${
@@ -113,6 +113,7 @@ const Questions = ({ questions, limit, category }: Props) => {
                   {answer}
                 </button>
               ))}
+              <Separator />
               <div className="flex mt-5 md:justify-between md:flex-row flex-col gap-4 md:gap-0 mx-auto max-w-xs w-full">
                 <Button
                   disabled={!selected}

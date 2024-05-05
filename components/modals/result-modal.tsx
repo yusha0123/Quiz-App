@@ -22,25 +22,24 @@ const ResultModal = () => {
           <DialogTitle className="text-center text-xl md:text-2xl">
             Quiz Result
           </DialogTitle>
-          <Separator className="my-2" />
-          <DialogDescription>
-            <div className="flex items-center flex-col py-6 md:py-10 lg:py-12">
-              <h3 className="text-lg md:2xl text-primary font-semibold tracking-wide">
-                You scored:{" "}
-                {`${additionalData?.score}/${additionalData?.limit}`}{" "}
-              </h3>
-              <Button
-                onClick={() => {
-                  router.push("/");
-                  onClose();
-                }}
-                className="mt-3 md:mt-5"
-              >
-                Play Again
-              </Button>
-            </div>
-          </DialogDescription>
         </DialogHeader>
+        <Separator />
+        <DialogDescription>
+          <div className="flex items-center flex-col py-6 md:py-10 lg:py-12">
+            <h3 className="text-lg md:2xl text-primary font-semibold tracking-wide">
+              You scored: {`${additionalData?.score}/${additionalData?.limit}`}
+            </h3>
+            <Button
+              onClick={() => {
+                router.push("/");
+                onClose();
+              }}
+              className="mt-3 md:mt-5"
+            >
+              Play Again
+            </Button>
+          </div>
+        </DialogDescription>
       </DialogContent>
     </Dialog>
   );
