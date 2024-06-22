@@ -62,23 +62,6 @@
   @apply min-h-[100dvh] w-full bg-gray-300 flex items-center justify-center;
 }
 
-.heading {
-  @apply text-2xl lg:text-4xl font-extrabold text-primary tracking-wide text-center py-2;
-}
-
-.option.correct {
-  @apply text-white bg-green-500;
-}
-
-.option.incorrect {
-  @apply text-white bg-red-500;
-}
-
-.option {
-  @apply text-black bg-white rounded-md text-sm lg:text-lg py-3 px-2 cursor-pointer disabled:cursor-default;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;

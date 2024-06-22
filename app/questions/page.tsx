@@ -1,6 +1,7 @@
 import Questions from "@/components/questions";
 import { categoryOptions, difficultyOptions } from "@/constants";
 import { redirect } from "next/navigation";
+import "./questions.css";
 
 type Props = {
   searchParams: {

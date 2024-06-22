@@ -56,7 +56,7 @@ const QuizSettings = () => {
           ))}
         </SelectContent>
       </Select>
-      <p className="text-xs lg:text-sm font-semibold">
+      <p className="text-sm lg:text-sm font-semibold">
         Total Questions: {limit[0]}
       </p>
       <Slider

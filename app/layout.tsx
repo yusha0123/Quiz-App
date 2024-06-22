@@ -1,7 +1,8 @@
-import ModalProvider from "@/components/modals/modal-provider";
-import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import ModalProvider from "@/components/modals/modal-provider";
+import { Toaster } from "@/components/ui/sonner";
+import "./globals.css";
 
 const poppins = Poppins({
   weight: "400",
@@ -10,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Quizy - Test Your Knowledge!",
-  description: "A Quiz App built on Next JS",
+  description: "A Quiz App built using Next JS",
 };
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <ModalProvider />
         {children}
+        <Toaster position="top-center" duration={5000} richColors />
       </body>
     </html>
   );

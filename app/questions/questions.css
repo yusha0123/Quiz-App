@@ -1,0 +1,21 @@
+.option {
+  @apply text-black bg-white rounded-md text-sm lg:text-lg py-3 px-2 cursor-pointer disabled:cursor-default;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.option:hover {
+  @apply bg-primary/30 transition duration-300;
+}
+
+.option.correct {
+  @apply text-white !bg-green-500;
+}
+
+.option.incorrect {
+  @apply text-white !bg-red-500;
+}
+
+.option:disabled {
+  @apply bg-white;
+}

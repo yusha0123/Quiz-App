@@ -1,14 +1,15 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Separator } from "@/components/ui/separator";
 import useModalStore from "@/hooks/useModalStore";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 
 const ResultModal = () => {
   const { isOpen, type, onClose, additionalData } = useModalStore();
@@ -24,22 +25,20 @@ const ResultModal = () => {
           </DialogTitle>
         </DialogHeader>
         <Separator />
-        <DialogDescription>
-          <div className="flex items-center flex-col py-6 md:py-10 lg:py-12">
-            <h3 className="text-lg md:2xl text-primary font-semibold tracking-wide">
-              You scored: {`${additionalData?.score}/${additionalData?.limit}`}
-            </h3>
-            <Button
-              onClick={() => {
-                router.push("/");
-                onClose();
-              }}
-              className="mt-3 md:mt-5"
-            >
-              Play Again
-            </Button>
-          </div>
-        </DialogDescription>
+        <div className="flex flex-col items-center py-4 md:py-6">
+          <p className="text-lg md:2xl text-primary font-semibold tracking-wide">
+            You scored: {`${additionalData?.score}/${additionalData?.limit}`}
+          </p>
+          <Button
+            onClick={() => {
+              router.push("/");
+              onClose();
+            }}
+            className="mt-3 md:mt-5"
+          >
+            Play Again
+          </Button>
+        </div>
       </DialogContent>
     </Dialog>
   );
