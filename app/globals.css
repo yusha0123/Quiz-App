@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root,
+html,
+body {
+  height: 100%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -54,12 +60,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground bg-background;
   }
-}
-
-.wrapper {
-  @apply min-h-[100dvh] w-full bg-gray-300 flex items-center justify-center;
+  main {
+    @apply min-h-[100dvh] flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -68,11 +73,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #565050;
+  background-color: #5e5adc;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f9ecec;
+  background-color: #9ba4d4;
   border-radius: 10px;
 }

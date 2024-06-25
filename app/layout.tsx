@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
         <ModalProvider />
-        {children}
+        <main>{children}</main>
         <Toaster position="top-center" duration={5000} richColors />
       </body>
     </html>

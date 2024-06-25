@@ -1,11 +1,7 @@
 import { Loader2 } from "lucide-react";
 
 const Loading = () => {
-  return (
-    <div className="wrapper">
-      <Loader2 className="h-10 w-10 text-primary animate-spin" />
-    </div>
-  );
+  return <Loader2 className="size-10 text-white animate-spin" />;
 };
 
 export default Loading;
