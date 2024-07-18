@@ -63,7 +63,7 @@ body {
     @apply text-foreground bg-background;
   }
   main {
-    @apply min-h-[100dvh] flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800;
+    @apply min-h-[100dvh] flex sm:items-center sm:justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800;
   }
 }
 
