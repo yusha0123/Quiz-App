@@ -3,6 +3,8 @@ import { categoryOptions, difficultyOptions } from "@/constants";
 import { redirect } from "next/navigation";
 import "./questions.css";
 
+export const fetchCache = "force-no-store";
+
 type Props = {
   searchParams: {
     category: string;
@@ -13,11 +15,17 @@ type Props = {
 
 async function getData(category: string, difficulty: string, limit: string) {
   const res = await fetch(
-    `https://the-trivia-api.com/api/questions?categories=${category}&limit=${limit}&type=multiple&difficulty=${difficulty}`
+    `https://the-trivia-api.com/api/questions?categories=${category}&limit=${limit}&type=multiple&difficulty=${difficulty}`,
+    {
+      method: "GET",
+      headers: {
+        "Cache-Control": "no-cache",
+      },
+    }
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Failed to fetch data!");
   }
 
   return res.json();
